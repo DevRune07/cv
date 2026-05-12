@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Rune | Experience</title>
+
+  <!-- GOOGLE FONT -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      scroll-behavior:smooth;
+    }
+
+    body{
+      font-family:'Poppins', sans-serif;
+      background:#0b0b0b;
+      color:white;
+      overflow-x:hidden;
+    }
+
+    /* BACKGROUND */
+
+    body::before{
+      content:'';
+      position:fixed;
+      width:100%;
+      height:100%;
+      background:
+      linear-gradient(rgba(0,0,0,0.78), rgba(0,0,0,0.88)),
+      url('https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=2071&auto=format&fit=crop');
+      background-size:cover;
+      background-position:center;
+      z-index:-1;
+      transform:scale(1.05);
+    }
+
+    /* HERO */
+
+    header{
+      height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      flex-direction:column;
+      text-align:center;
+      padding:20px;
+      animation:fadeIn 1.5s ease;
+    }
+
+    header h1{
+      font-size:6rem;
+      font-weight:700;
+      background:linear-gradient(90deg,#ff2d55,#ff7b95);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+      animation:slideDown 1s ease;
+    }
+
+    header p{
+      margin-top:15px;
+      font-size:1.3rem;
+      color:#d0d0d0;
+      animation:fadeIn 2s ease;
+    }
+
+    .button{
+      margin-top:35px;
+      padding:15px 35px;
+      border-radius:50px;
+      text-decoration:none;
+      color:white;
+      background:linear-gradient(90deg,#ff2d55,#ff4f73);
+      transition:0.3s;
+      font-weight:600;
+      box-shadow:0 0 20px rgba(255,45,85,0.4);
+    }
+
+    .button:hover{
+      transform:translateY(-5px) scale(1.03);
+      box-shadow:0 0 30px rgba(255,45,85,0.7);
+    }
+
+    /* SECTION */
+
+    section{
+      max-width:1200px;
+      margin:auto;
+      padding:100px 25px;
+    }
+
+    h2{
+      text-align:center;
+      font-size:3rem;
+      margin-bottom:50px;
+      color:white;
+    }
+
+    /* ABOUT */
+
+    .about{
+      backdrop-filter:blur(14px);
+      background:rgba(255,255,255,0.05);
+      border:1px solid rgba(255,255,255,0.08);
+      border-radius:25px;
+      padding:40px;
+      animation:fadeUp 1s ease;
+    }
+
+    .about p{
+      color:#e0e0e0;
+      font-size:1.05rem;
+      line-height:1.8;
+    }
+
+    /* SKILLS */
+
+    .skills{
+      display:flex;
+      flex-wrap:wrap;
+      gap:15px;
+      margin-top:30px;
+    }
+
+    .skill{
+      padding:12px 18px;
+      border-radius:999px;
+      background:rgba(255,45,85,0.15);
+      border:1px solid rgba(255,45,85,0.4);
+      transition:0.3s;
+    }
+
+    .skill:hover{
+      background:#ff2d55;
+      transform:scale(1.05);
+    }
+
+    /* EXPERIENCE */
+
+    .experience-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:25px;
+    }
+
+    .card{
+      backdrop-filter:blur(14px);
+      background:rgba(255,255,255,0.05);
+      border:1px solid rgba(255,255,255,0.08);
+      border-radius:25px;
+      padding:30px;
+      transition:0.4s;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .card::before{
+      content:'';
+      position:absolute;
+      width:100%;
+      height:5px;
+      top:0;
+      left:0;
+      background:linear-gradient(90deg,#ff2d55,#ff7b95);
+    }
+
+    .card:hover{
+      transform:translateY(-10px);
+      border-color:rgba(255,45,85,0.5);
+      box-shadow:0 0 35px rgba(255,45,85,0.2);
+    }
+
+    .card h3{
+      font-size:1.6rem;
+      margin-bottom:15px;
+      color:#ff7b95;
+    }
+
+    .card p{
+      color:#d5d5d5;
+      margin-bottom:10px;
+    }
+
+    /* FOOTER */
+
+    footer{
+      text-align:center;
+      padding:40px;
+      color:#999;
+      border-top:1px solid rgba(255,255,255,0.08);
+      backdrop-filter:blur(10px);
+    }
+
+    /* ANIMATIONS */
+
+    @keyframes fadeIn{
+      from{
+        opacity:0;
+      }
+      to{
+        opacity:1;
+      }
+    }
+
+    @keyframes slideDown{
+      from{
+        opacity:0;
+        transform:translateY(-40px);
+      }
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+
+    @keyframes fadeUp{
+      from{
+        opacity:0;
+        transform:translateY(40px);
+      }
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+
+  <header>
+
+    <h1>Rune</h1>
+
+    <p>My Experience & Staff Background</p>
+
+    <a href="#experience" class="button">
+      View Experience
+    </a>
+
+  </header>
+
+  <!-- ABOUT -->
+
+  <section>
+
+    <h2>About Me</h2>
+
+    <div class="about">
+
+      <p>
+        Hello, my name is Rune.
+        I have experience working within multiple Discord roleplay communities and management teams.
+        Over time, I developed strong moderation, leadership, communication, and management skills while helping maintain active and professional communities.
+        I am experienced in handling Internal Affairs situations, resolving conflicts professionally, and managing teams efficiently under pressure.
+      </p>
+
+      <div class="skills">
+
+        <div class="skill">Moderation</div>
+
+        <div class="skill">Leadership</div>
+
+        <div class="skill">Internal Affairs</div>
+
+        <div class="skill">Team Management</div>
+
+        <div class="skill">Conflict Resolution</div>
+
+        <div class="skill">Community Management</div>
+
+        <div class="skill">Professional Communication</div>
+
+        <div class="skill">Teamwork</div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- EXPERIENCE -->
+
+  <section id="experience">
+
+    <h2>Experience</h2>
+
+    <div class="experience-grid">
+
+      <div class="card">
+
+        <h3>DBRP</h3>
+
+        <p><strong>Role:</strong> Moderator</p>
+
+        <p><strong>Members:</strong> 4,000+</p>
+
+      </div>
+
+      <div class="card">
+
+        <h3>LOSRPP</h3>
+
+        <p><strong>Role:</strong> Moderator</p>
+
+        <p><strong>Members:</strong> 16,000+</p>
+
+      </div>
+
+      <div class="card">
+
+        <h3>Carl</h3>
+
+        <p><strong>Role:</strong> Senior Management</p>
+
+        <p><strong>Members:</strong> 3,000+</p>
+
+      </div>
+
+      <div class="card">
+
+        <h3>Racing League</h3>
+
+        <p><strong>Role:</strong> Head Manager</p>
+
+        <p><strong>Members:</strong> 200+</p>
+
+      </div>
+
+      <div class="card">
+
+        <h3>LARP</h3>
+
+        <p><strong>Role:</strong> Chief of Staff</p>
+
+        <p><strong>Members:</strong> 4,500+</p>
+
+        <p><strong>Status:</strong> Stopped</p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    © 2026 Rune — Experience Page
+
+  </footer>
+
+</body>
+</html>
